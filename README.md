@@ -33,10 +33,10 @@ SpellIt
    composer install
    ```
 
-1. Setup app/config/parameters.yml 
+1. Part way through composer install, you will be prompted for database parameters, setup app/config/parameters.yml 
 
    ```
-   You can contact me via email for the database credentials. See the file labeled 'Contact Info' in our shared Google Drive folder.
+   You can find the database credentials in our shared Google Drive folder in a file labeled 'Database Parameters'.
    ```
 
 1. Install and front end components
