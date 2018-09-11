@@ -1,0 +1,23 @@
+homepage:
+  path: /
+  defaults: { _controller: app.default_controller:showHomeAction }
+
+create_new_set:
+  path: /ajax/createNewSet
+  defaults:  { _controller: app.set_controller:createNewSet }
+  methods: ['POST']
+
+add_new_header:
+  path: /ajax/addNewHeader
+  defaults:  { _controller: app.set_controller:addNewHeader }
+  methods: ['POST']
+
+add_new_rule:
+  path: /ajax/addNewRule
+  defaults:  { _controller: app.set_controller:addNewRule }
+  methods: ['POST']
+
+delete_rule:
+  path: /ajax/deleteRule
+  defaults:  { _controller: app.set_controller:deleteRule }
+  methods: ['POST']

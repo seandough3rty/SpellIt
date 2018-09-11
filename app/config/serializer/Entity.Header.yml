@@ -1,0 +1,19 @@
+AppBundle\Model\Entity\Header:
+  exclusion_policy: ALL
+  properties:
+    headerID:
+      expose: true
+    optionName:
+      expose: true
+    className:
+      expose: true
+    crossProduct:
+      expose: true
+    lineCount:
+      expose: true
+    set:
+      expose: false
+      exclude: true
+    rules:
+      expose: false
+      exclude: true

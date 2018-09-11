@@ -1,0 +1,41 @@
+# Composer
+composer.phar
+app/bootstrap.php.cache
+var/bootstrap.php.cache
+/app/cache/*
+!app/cache/.gitkeep
+/app/config/parameters.yml
+/var/cache/*
+!var/cache/.gitkeep
+/app/logs/*
+!app/logs/.gitkeep
+/var/logs/*
+!var/logs/.gitkeep
+/app/phpunit.xml
+/vendor/
+web/vendor
+/var/sessions/*
+
+# Bower
+/bower_components/
+
+# Node
+/node_modules/
+
+# Assets
+/web/bundles/
+/web/uploads/
+/web/css
+/web/fonts
+
+# editors
+.idea
+./vs
+*.sln
+*.phpproj
+*.swp
+.DS_Store
+
+#security
+var/jwt/*
+/web/.ebextensions

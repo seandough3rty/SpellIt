@@ -1,0 +1,32 @@
+AppBundle\Model\Entity\Rule:
+  type: entity
+  table: Rules
+  id:
+    ruleID:
+      type: integer
+      column: ruleID
+      id: true
+      nullable: false
+      generator:
+        strategy: AUTO
+  fields:
+    strippingChars:
+      column: strippingChars
+      type: string
+      nullable: false
+    affix:
+      column: affix
+      type: string
+      nullable: false
+    conditional:
+      column: conditional
+      type: string
+      nullable: false
+  manyToOne:
+    header:
+      targetEntity: Header
+      inversedBy: rules
+      joinColumn:
+        name: headerID
+        referencedColumnName: headerID
+        nullable: false

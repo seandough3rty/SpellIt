@@ -1,0 +1,40 @@
+AppBundle\Model\Entity\Header:
+  type: entity
+  table: Headers
+  id:
+    headerID:
+      type: integer
+      column: headerID
+      id: true
+      nullable: false
+      generator:
+        strategy: AUTO
+  fields:
+    optionName:
+      column: optionName
+      type: string
+      nullable: false
+    className:
+      column: className
+      type: string
+      nullable: false
+    crossProduct:
+      column: crossProduct
+      type: boolean
+      nullable: false
+    lineCount:
+      column: lineCount
+      type: integer
+      nullable: false
+  manyToOne:
+    set:
+      targetEntity: Set
+      inversedBy: headers
+      joinColumn:
+        name: setID
+        referencedColumnName: setID
+        nullable: false
+  oneToMany:
+    rules:
+      targetEntity: Rule
+      mappedBy: header

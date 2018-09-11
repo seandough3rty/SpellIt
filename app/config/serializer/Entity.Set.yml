@@ -1,0 +1,10 @@
+AppBundle\Model\Entity\Set:
+  exclusion_policy: ALL
+  properties:
+    setID:
+      expose: true
+    languageName:
+      expose: true
+    headers:
+      expose: false
+      exclude: true

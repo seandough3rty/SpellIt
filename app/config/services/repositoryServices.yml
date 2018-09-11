@@ -1,0 +1,15 @@
+services:
+  repository.set_repository:
+    class: AppBundle\Model\Repository\SetRepository
+    arguments:
+      - "@=service('doctrine.orm.default_entity_manager').getRepository('App:Set')"
+
+  repository.header_repository:
+    class: AppBundle\Model\Repository\HeaderRepository
+    arguments:
+      - "@=service('doctrine.orm.default_entity_manager').getRepository('App:Header')"
+
+  repository.rule_repository:
+    class: AppBundle\Model\Repository\RuleRepository
+    arguments:
+      - "@=service('doctrine.orm.default_entity_manager').getRepository('App:Rule')"

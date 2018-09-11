@@ -1,0 +1,14 @@
+AppBundle\Model\Entity\Rule:
+  exclusion_policy: ALL
+  properties:
+    ruleID:
+      expose: true
+    strippingChars:
+      expose: true
+    affix:
+      expose: true
+    conditional:
+      expose: true
+    header:
+      expose: false
+      exclude: true

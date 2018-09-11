@@ -1,0 +1,29 @@
+imports:
+  - { resource: services/repositoryServices.yml }
+  - { resource: services/controllerServices.yml }
+
+services:
+  services.persistence.doctrine:
+    class: AppBundle\Services\PersistenceService
+    arguments: ['@=service("doctrine.orm.default_entity_manager")']
+
+  services.rule_service:
+      class: AppBundle\Services\RuleService
+      arguments:
+        - '@repository.rule_repository'
+        - '@repository.header_repository'
+        - '@services.persistence.doctrine'
+
+  services.header_service:
+      class: AppBundle\Services\HeaderService
+      arguments:
+        - '@repository.header_repository'
+        - '@repository.set_repository'
+        - '@repository.rule_repository'
+        - '@services.persistence.doctrine'
+
+  services.set_service:
+      class: AppBundle\Services\SetService
+      arguments:
+        - '@repository.set_repository'
+        - '@services.persistence.doctrine'

@@ -1,0 +1,14 @@
+{
+  "name": "phas3",
+  "dependencies": {
+    "animate.css": "~3.4.0",
+    "bootstrap": "~3.3.1",
+    "fontawesome": "~4.4.0",
+    "jquery": "~1.11.1",
+    "orbitron-googlefont": "*",
+    "chart.js": "^2.5.0"
+  },
+  "resolutions": {
+    "jquery": "~1.11.1"
+  }
+}

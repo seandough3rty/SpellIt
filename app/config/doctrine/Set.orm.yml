@@ -1,0 +1,20 @@
+AppBundle\Model\Entity\Set:
+  type: entity
+  table: Sets
+  id:
+    setID:
+      type: integer
+      column: setID
+      id: true
+      nullable: false
+      generator:
+        strategy: AUTO
+  fields:
+    languageName:
+      column: languageName
+      type: string
+      nullable: false
+  oneToMany:
+    headers:
+      targetEntity: Header
+      mappedBy: set

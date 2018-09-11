@@ -1,0 +1,25 @@
+services:
+  #controllers
+  app.abstract_controller:
+    abstract: true
+    calls:
+      - [setRouter, ['@router']]
+      - [setRequest, ['@request_stack']]
+      - [setTokenStorage, ['@security.token_storage']]
+      - [setSerializer, ['@jms_serializer']]
+      - [setSetService, ['@services.set_service']]
+
+  app.default_controller:
+    class: AppBundle\Controller\DefaultController
+    parent: app.abstract_controller
+    calls:
+      - [setTemplating, ['@templating']]
+
+  app.set_controller:
+    class: AppBundle\Controller\SetController
+    parent: app.abstract_controller
+    calls:
+      - [setTemplating, ['@templating']]
+    arguments:
+      - '@services.header_service'
+      - '@services.rule_service'
