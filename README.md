@@ -8,6 +8,13 @@ SpellIt
    ```
    git clone https://github.com/seandough3rty/SpellIt.git 
    ```
+   
+1. Prepare repo
+
+   ```
+   Navigate to App/Config and create an empty folder named "validation"
+   ```
+   
 1. For windows, install composer from this link
    
    ```
@@ -33,6 +40,8 @@ SpellIt
    ```
 
 1. Install and front end components
+
+   When installing, you may see a lot of deprecation notifications. These are to be expected, everything is fine.
 
    Install Nodejs and NPM:
    ```
